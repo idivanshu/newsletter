@@ -54,11 +54,11 @@ app.post("/", function (req, res) {
  const request =  https.request(url, options, function (response) {
      
    if(response.statusCode===200){
-      res.send("<h1>here you go nailed it</h1>");
+      res.sendFile(__dirname + "/success.html");
       
    }
    else{
-      res.send("<h1>fucked up buddy</h1>");
+      res.sendFile(__dirname + "/failure.html");
    }
 
 
